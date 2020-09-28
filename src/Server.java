@@ -2,7 +2,7 @@ import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.HashMap;
-
+// Represents connected client information
 class ClientData {
     String name;
     public BufferedReader reader;
@@ -15,7 +15,7 @@ class ClientData {
     }
 }
 
-
+// The server for the chat room
 public class Server {
     static int port;
     public static HashMap<String, ClientData> clients = new HashMap<>();
@@ -44,7 +44,7 @@ public class Server {
         }
     }
 }
-
+// Handler thread for each client that connects
 class ClientHandler extends Thread {
     Socket socket;
     String name;
